@@ -188,6 +188,7 @@ function midelViewer_create_function(Div_mv, newModelViewer, i)
 function midelViewer_arbutton_create(newModelViewer, newCustomARButton, i) 
 {
   // newCustomARButton.id = 'custom-ar-button';
+  newCustomARButton.classList.add(`custom-ar-button`); 
   newCustomARButton.id = `customArButton-${i}`;
   newCustomARButton.setAttribute('slot', 'ar-button');
   newCustomARButton.textContent = 'start'; // ボタンのテキストを設定
