@@ -1,6 +1,6 @@
 
 
-
+console.log("create_r1_read");
 
 
 // 1. <main> 要素を取得
@@ -208,7 +208,6 @@ function midelViewer_arbutton_create(newModelViewer, newCustomARButton, i)
   newCustomARButton.style.fontSize = '1rem';
   newCustomARButton.style.fontWeight = '400';
   newCustomARButton.style.position = 'absolute';
-
 }
 
 
