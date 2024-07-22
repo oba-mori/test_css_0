@@ -77,8 +77,9 @@
 
 /* <!-- AR起動ボタンのデザイン --> */
 
-  #custom-ar-button
-  {         
+  /* #custom-ar-button */
+  .custom-ar-button
+  {     
     /* ボックスの大きさ */ 
     width: 15.0rem;    /* 幅 */
     height: 4.0rem;    /* 高さ */
@@ -101,3 +102,4 @@
     position: absolute;   /* custom-ar-buttonというidがついたボックスに下記(div id="custom-ar-button")の配置位置を反映 */
   
   }
+
