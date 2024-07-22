@@ -1,18 +1,23 @@
 // 寸法
 
-
+{
 // 別のファイルから変数をimport
-import {numberOfDivs} from './element_create_r1.js';
+// import {numberOfDivs} from './element_create_r1.js';
 
 // div要素を格納する配列を作成
-export let mv_element = [];
+let mv_element = [];
 
-dot(numberOfDivs);
+
+dot();
 
 
 // midelViewerのsrc設定関数
-function dot(numberOfDivs) 
+function dot() 
 {
+    // item の数
+    const numberOfDivs = 8;
+
+
   // modelviewer要素取得
   for (let i = 0; i < numberOfDivs; i++) {
 
@@ -536,3 +541,4 @@ function dot(numberOfDivs)
 //     //寸法関連終わり
 
 
+}

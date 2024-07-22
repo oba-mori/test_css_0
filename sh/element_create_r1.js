@@ -1,13 +1,13 @@
 
 
-console.log("create_r1_read");
-
+{
 
 // 1. <main> 要素を取得
-export const mainElement = document.querySelector('main');
+// export const mainElement = document.querySelector('main');
 
 // item の数
-export const numberOfDivs = 8;
+// export const numberOfDivs = 8;
+const numberOfDivs = 8;
 
 
 
@@ -291,7 +291,7 @@ function create_a_2(Div_a_2,A_2,i)
 
 
 
-
+}
 
 
 

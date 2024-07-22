@@ -1,4 +1,5 @@
 // ARカメラリセット
+{
 
 // 別のファイルから変数をimport
 // import {numberOfDivs} from './element_create_r1.js';
@@ -13,11 +14,11 @@
 
 
 // item の数
-// export const numberOfDivs = 1;
+const numberOfDivs = 8;
 
 // div要素を作成して追加
-// for (let i = 0; i < numberOfDivs; i++) {
-  for (let i = 0; i < 8; i++) {
+for (let i = 0; i < numberOfDivs; i++) {
+  // for (let i = 0; i < 8; i++) {
     // // 新しいdiv要素を作成
   // const newDiv = document.createElement('div');
   
@@ -49,3 +50,6 @@
 }
 
 // });  // DOM待ち
+
+
+}
