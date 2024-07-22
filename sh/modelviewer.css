@@ -4,8 +4,8 @@
       /* 左下の表示オブジェクトと寸法ONOFFを切り替えるボックスのデザイン、内容は下の div id="controls" の所でやっている */
       #controls {
         position: absolute; /* controlsというidがついたボックスに下記(div id="controls")の配置位置を反映 */
-        bottom: 1.6rem;       /* 下からの配置位置(距離)を指定(表示領域の最下端から) */
-        left: 1.6rem;         /* 左からの配置位置(距離)を指定(表示領域の最左端から) */
+        bottom: 0.6rem;       /* 下からの配置位置(距離)を指定(表示領域の最下端から) */
+        left: 0.6rem;         /* 左からの配置位置(距離)を指定(表示領域の最左端から) */
         max-width: unset;   /* 下記(div id="controls")で設定する内容が入る場所の幅の最大値を設定、最大値を設定すると内容の幅が一定範囲を超えない */
         transform: unset;   /* 内容をボックスの中央に配置したりすることが出来る */
       }                     /* unsetは、親要素から継承される属性に対しては inherit と同じ動作を、継承されない属性に対しては initial と同じ動作をする */
@@ -73,33 +73,38 @@
 
 
 
+/* modelViewer */
+.mv{
+  width: 20rem;    /* 幅 */
+  height: 30rem;    /* 高さ */
+}
+
+
 
 
 /* <!-- AR起動ボタンのデザイン --> */
+/* #custom-ar-button */
+.custom-ar-button
+{     
+  /* ボックスの大きさ */ 
+  width: 15.0rem;    /* 幅 */
+  height: 4.0rem;    /* 高さ */
 
-  /* #custom-ar-button */
-  .custom-ar-button
-  {     
-    /* ボックスの大きさ */ 
-    width: 30.0rem;    /* 幅 */
-    height: 8.0rem;    /* 高さ */
+  /* ボックスの位置 */
+  bottom: 1.6rem;         /* 下からの配置位置(距離)を指定(表示領域の最下端から) */
+  right: 1.6rem;          /* 右からの配置位置(距離)を指定(表示領域の再右端から) */
 
-    /* ボックスの位置 */
-    bottom: 1.6rem;         /* 下からの配置位置(距離)を指定(表示領域の最下端から) */
-    right: 1.6rem;          /* 右からの配置位置(距離)を指定(表示領域の再右端から) */
-
-    /* ボックスのカスタマイズ */
-    border-radius: 0.6rem;   /* border-radius:ボックスの4つのコーナーの角丸をまとめて指定 */
-    box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.25);  /* box-shadow:ボックスのフレーム周辺に影を作る */         
-    background-color: white;  /* background:ボックスの背景色指定 */
-    
-    /* フォント */
-    font-family: Futura, Helvetica Neue, sans-serif;    /* フォント指定 */
-    font-size: 1.6rem;      /* フォントの大きさ */
-    font-weight: 400;     /* フォントの太さ */
-
-    /*？ これがないと指定した位置ではなく、左上に配置される 理由は分からない*/
-    position: absolute;   /* custom-ar-buttonというidがついたボックスに下記(div id="custom-ar-button")の配置位置を反映 */
+  /* ボックスのカスタマイズ */
+  border-radius: 0.6rem;   /* border-radius:ボックスの4つのコーナーの角丸をまとめて指定 */
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.25);  /* box-shadow:ボックスのフレーム周辺に影を作る */         
+  background-color: white;  /* background:ボックスの背景色指定 */
   
-  }
+  /* フォント */
+  font-family: Futura, Helvetica Neue, sans-serif;    /* フォント指定 */
+  font-size: 1.6rem;      /* フォントの大きさ */
+  font-weight: 400;     /* フォントの太さ */
+
+  /*？ これがないと指定した位置ではなく、左上に配置される 理由は分からない*/
+  position: absolute;   /* custom-ar-buttonというidがついたボックスに下記(div id="custom-ar-button")の配置位置を反映 */
+}
 

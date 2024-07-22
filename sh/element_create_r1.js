@@ -154,10 +154,12 @@ function create_div_mv(Div_item, Div_mv, i)
 }
 
 
+
 // midelViewer作成関数
 function midelViewer_create_function(Div_mv, newModelViewer, i) 
 {
   // newModelViewer.classList.add('mv-0'); // classを追加
+  newModelViewer.classList.add('mv'); // classを追加
   
   // 必要な属性を設定
   // newModelViewer.id = 'dimension-demo';
@@ -176,8 +178,8 @@ function midelViewer_create_function(Div_mv, newModelViewer, i)
   newModelViewer.setAttribute('interaction-prompt', 'none');  // デフォルトの操作プロンプト（「モデルを操作できますよ」という視覚的ヒント）を無効
 
   // スタイルを設定
-  newModelViewer.style.width = '20.0rem';
-  newModelViewer.style.height = '30.0rem';
+  // newModelViewer.style.width = '20.0rem';
+  // newModelViewer.style.height = '30.0rem';
   // newModelViewer.style.width = '8.0rem';
   // newModelViewer.style.height = '10.0rem';
 
