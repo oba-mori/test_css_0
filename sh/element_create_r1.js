@@ -199,17 +199,17 @@ function midelViewer_arbutton_create(newModelViewer, newCustomARButton, i)
   newModelViewer.appendChild(newCustomARButton);
 
   // CSS
-  newCustomARButton.style.width = '1rem';
-  newCustomARButton.style.height = '0.2rem';
-  newCustomARButton.style.bottom = '1.6rem';
-  newCustomARButton.style.right = '1.6rem';
-  newCustomARButton.style.borderRadius = '0.6rem';
-  newCustomARButton.style.boxShadow = '0 0.2rem 0.4rem rgba(0, 0, 0, 0.25)';
-  newCustomARButton.style.backgroundColor  = 'white';
-  newCustomARButton.style.fontFamily = 'Futura, Helvetica Neue, sans-serif';
-  newCustomARButton.style.fontSize = '1rem';
-  newCustomARButton.style.fontWeight = '400';
-  newCustomARButton.style.position = 'absolute';
+  // newCustomARButton.style.width = '1rem';
+  // newCustomARButton.style.height = '0.2rem';
+  // newCustomARButton.style.bottom = '1.6rem';
+  // newCustomARButton.style.right = '1.6rem';
+  // newCustomARButton.style.borderRadius = '0.6rem';
+  // newCustomARButton.style.boxShadow = '0 0.2rem 0.4rem rgba(0, 0, 0, 0.25)';
+  // newCustomARButton.style.backgroundColor  = 'white';
+  // newCustomARButton.style.fontFamily = 'Futura, Helvetica Neue, sans-serif';
+  // newCustomARButton.style.fontSize = '1rem';
+  // newCustomARButton.style.fontWeight = '400';
+  // newCustomARButton.style.position = 'absolute';
 }
 
 
