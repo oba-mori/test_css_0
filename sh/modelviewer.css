@@ -1,63 +1,62 @@
 
 
 
-      /* 左下の表示オブジェクトと寸法ONOFFを切り替えるボックスのデザイン、内容は下の div id="controls" の所でやっている */
-      #controls {
-        position: absolute; /* controlsというidがついたボックスに下記(div id="controls")の配置位置を反映 */
-        bottom: 0.6rem;       /* 下からの配置位置(距離)を指定(表示領域の最下端から) */
-        left: 0.6rem;         /* 左からの配置位置(距離)を指定(表示領域の最左端から) */
-        max-width: unset;   /* 下記(div id="controls")で設定する内容が入る場所の幅の最大値を設定、最大値を設定すると内容の幅が一定範囲を超えない */
-        transform: unset;   /* 内容をボックスの中央に配置したりすることが出来る */
-      }                     /* unsetは、親要素から継承される属性に対しては inherit と同じ動作を、継承されない属性に対しては initial と同じ動作をする */
-      
-      /* オブジェクトの頂点に配置される白い丸 (寸法(幅、高さ、奥行き)の長さを見やすくするためのもの) */
-      .dot{
-        display: block; /* isplay:要素の表示のされ方、block:要素が横までいっぱいに広がり、縦に並んでいく(上から、下から) */
-        width: 0.8rem;    /* 幅 */
-        height: 0.8rem;   /* 高さ */
-        border-radius: 50%;         /* border-radius:ボックスの4つのコーナーの角丸をまとめて指定 → 〇のような図が作れる、50％:ボックスの辺の50％の半径の円を作成 → 円が出来る */
-        box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.25);  /* box-shadow:ボックスのフレーム周辺に影を作る */
-        background: #fff;         /* background:ボックスの背景色指定 */
-        --min-hotspot-opacity: 0;   /* HTML内の要素の不透明度を設定(0:完全に透明)  --min-hotspot-:非表示のホットスポットの不透明度を設定する */
-        padding: 0rem;
-        margin: 0rem;
-      }
-      
-      /* 寸法が入るボックス、文字のフォント、色等 */
-      .dim{
-        background: #fff;    /* ボックスの背景色 */
-        border-radius: 0.6rem;    /* border-radius:ボックスの4つのコーナーの角丸をまとめて指定 */
-        box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.25);    /* box-shadow:ボックスのフレーム周辺に影を作る */
-        color: rgba(0, 0, 0, 0.8);        /* 多分要素(文字)の色 */
-        display: block;       /* isplay:要素の表示のされ方、block:要素が横までいっぱいに広がり、縦に並んでいく(上から、下から) */
-        font-family: Futura, Helvetica Neue, sans-serif;    /* フォント指定 */
-        font-size: 1.2rem;      /* フォントの大きさ */
-        font-weight: 700;     /* フォントの太さ */
-        max-width: 12.8rem;     /*内容が入る場所の幅の最大値を設定、最大値を設定すると内容の幅が一定範囲を超えない */
-        overflow-wrap: break-word;  /*  */
-        padding: 0.05em 0.1em;   /*  */
-        position: absolute;   /*  */
-        width: max-content;   /* 幅 */
-        height: max-content;  /* 高さ */
-        transform: translate3d(-50%, -50%, 0);   /* 内容をボックスの中央に配置したりすることが出来る */
-        --min-hotspot-opacity: 0;     /* HTML内の要素の不透明度を設定(0:完全に透明)  --min-hotspot-:非表示のホットスポットの不透明度を設定する*/
-      }
-    
-      .show{
-        --min-hotspot-opacity: 1;     /* HTML内の要素の不透明度を設定(1:完全に不透明)  --min-hotspot-:非表示のホットスポットの不透明度を設定する*/
-      }
-      
-      /* 寸法用の白い丸、数字を非表示にする */
-      .hide{
-        display: none;  /* none:非表示 */
-      }
-      
-      /* これにより、要素が読み込まれている間、子ノードが非表示になります */
-      /*  */
-      :not(:defined) > * {
-        display: none;  /* none:非表示 */
-      }
+/* 左下の表示オブジェクトと寸法ONOFFを切り替えるボックスのデザイン、内容は下の div id="controls" の所でやっている */
+#controls {
+  position: absolute; /* controlsというidがついたボックスに下記(div id="controls")の配置位置を反映 */
+  bottom: 0.6rem;       /* 下からの配置位置(距離)を指定(表示領域の最下端から) */
+  left: 0.6rem;         /* 左からの配置位置(距離)を指定(表示領域の最左端から) */
+  max-width: unset;   /* 下記(div id="controls")で設定する内容が入る場所の幅の最大値を設定、最大値を設定すると内容の幅が一定範囲を超えない */
+  transform: unset;   /* 内容をボックスの中央に配置したりすることが出来る */
+}                     /* unsetは、親要素から継承される属性に対しては inherit と同じ動作を、継承されない属性に対しては initial と同じ動作をする */
 
+/* オブジェクトの頂点に配置される白い丸 (寸法(幅、高さ、奥行き)の長さを見やすくするためのもの) */
+.dot{
+  display: block; /* isplay:要素の表示のされ方、block:要素が横までいっぱいに広がり、縦に並んでいく(上から、下から) */
+  width: 0.8rem;    /* 幅 */
+  height: 0.8rem;   /* 高さ */
+  border-radius: 50%;         /* border-radius:ボックスの4つのコーナーの角丸をまとめて指定 → 〇のような図が作れる、50％:ボックスの辺の50％の半径の円を作成 → 円が出来る */
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.25);  /* box-shadow:ボックスのフレーム周辺に影を作る */
+  background: #fff;         /* background:ボックスの背景色指定 */
+  --min-hotspot-opacity: 0;   /* HTML内の要素の不透明度を設定(0:完全に透明)  --min-hotspot-:非表示のホットスポットの不透明度を設定する */
+  padding: 0rem;
+  margin: 0rem;
+}
+
+/* 寸法が入るボックス、文字のフォント、色等 */
+.dim{
+  background: #fff;    /* ボックスの背景色 */
+  border-radius: 0.6rem;    /* border-radius:ボックスの4つのコーナーの角丸をまとめて指定 */
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.25);    /* box-shadow:ボックスのフレーム周辺に影を作る */
+  color: rgba(0, 0, 0, 0.8);        /* 多分要素(文字)の色 */
+  display: block;       /* isplay:要素の表示のされ方、block:要素が横までいっぱいに広がり、縦に並んでいく(上から、下から) */
+  font-family: Futura, Helvetica Neue, sans-serif;    /* フォント指定 */
+  font-size: 1.2rem;      /* フォントの大きさ */
+  font-weight: 700;     /* フォントの太さ */
+  max-width: 12.8rem;     /*内容が入る場所の幅の最大値を設定、最大値を設定すると内容の幅が一定範囲を超えない */
+  overflow-wrap: break-word;  /*  */
+  padding: 0.05em 0.1em;   /*  */
+  position: absolute;   /*  */
+  width: max-content;   /* 幅 */
+  height: max-content;  /* 高さ */
+  transform: translate3d(-50%, -50%, 0);   /* 内容をボックスの中央に配置したりすることが出来る */
+  --min-hotspot-opacity: 0;     /* HTML内の要素の不透明度を設定(0:完全に透明)  --min-hotspot-:非表示のホットスポットの不透明度を設定する*/
+}
+
+.show{
+  --min-hotspot-opacity: 1;     /* HTML内の要素の不透明度を設定(1:完全に不透明)  --min-hotspot-:非表示のホットスポットの不透明度を設定する*/
+}
+
+/* 寸法用の白い丸、数字を非表示にする */
+.hide{
+  display: none;  /* none:非表示 */
+}
+
+/* これにより、要素が読み込まれている間、子ノードが非表示になります */
+/*  */
+:not(:defined) > * {
+  display: none;  /* none:非表示 */
+}
 
 
 /* オブジェクトのlabel要素
@@ -73,10 +72,25 @@
 
 
 
+/* itemの親要素 */
+.Div_all_item-class {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* 子要素 */
+.Div_item-class {
+  width: calc(50% - 0.1rem); /* 2列にするために幅を50%に設定し、余白を引く */
+  height: 30rem;
+  margin: 0.5rem; /* 子要素間の余白を設定 */
+  box-sizing: border-box; /* パディングやボーダーを含めた幅の計算 */
+  background-color: lightgrey; /* 見やすくするための背景色（オプション） */
+}
+
 /* modelViewer */
 .mv{
-  width: 3rem;    /* 幅 */
-  height: 1.5rem;    /* 高さ */
+  /*width: 18rem;    /* 幅 */
+  /*height: 30rem;    /* 高さ */
 }
 
 
