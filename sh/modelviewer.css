@@ -81,8 +81,8 @@
   .custom-ar-button
   {     
     /* ボックスの大きさ */ 
-    width: 15.0rem;    /* 幅 */
-    height: 4.0rem;    /* 高さ */
+    width: 30.0rem;    /* 幅 */
+    height: 8.0rem;    /* 高さ */
 
     /* ボックスの位置 */
     bottom: 1.6rem;         /* 下からの配置位置(距離)を指定(表示領域の最下端から) */
