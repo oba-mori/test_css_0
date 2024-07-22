@@ -75,8 +75,8 @@
 
 /* modelViewer */
 .mv{
-  width: 20rem;    /* 幅 */
-  height: 30rem;    /* 高さ */
+  width: 3rem;    /* 幅 */
+  height: 1.5rem;    /* 高さ */
 }
 
 
@@ -87,7 +87,7 @@
 .custom-ar-button
 {     
   /* ボックスの大きさ */ 
-  width: 15.0rem;    /* 幅 */
+  width: 12.0rem;    /* 幅 */
   height: 4.0rem;    /* 高さ */
 
   /* ボックスの位置 */
