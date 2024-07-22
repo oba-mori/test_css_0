@@ -1,5 +1,6 @@
 // ARカメラリセット
 {
+  
 
 // 別のファイルから変数をimport
 // import {numberOfDivs} from './element_create_r1.js';

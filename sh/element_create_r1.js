@@ -1,9 +1,10 @@
 
-
 {
+
 
 // 1. <main> 要素を取得
 // export const mainElement = document.querySelector('main');
+const mainElement = document.querySelector('main');
 
 // item の数
 // export const numberOfDivs = 8;
@@ -14,6 +15,7 @@ const numberOfDivs = 8;
 
 
 const Div_all_item = document.createElement('div');
+
 // div作成関数呼び出し
 create_div_all_item(mainElement,Div_all_item);
  
