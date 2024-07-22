@@ -126,7 +126,7 @@
         <!-- カメラリセット -->
          <!-- ARカメラ起動後、このページに戻って来た時に3Dモデルにカメラが近づいてしまうため -->
         <!-- <script src="./camera_reset.js"></script> -->
-        <!-- <script type="module" src="./camera_reset.js" defer></script> -->
+        <script type="module" src="./camera_reset.js" defer></script>
         <!-- ↑これを読み込むと2つ生成される -->
 
         <!-- <script type="module" src="./camera_reset.js"></script> -->
@@ -137,38 +137,38 @@
 
         
 <script>
-        // div要素を作成して追加
-        // for (let i = 0; i < numberOfDivs; i++) {
-        for (let i = 0; i < 8; i++) {
-            // // 新しいdiv要素を作成
-          // const newDiv = document.createElement('div');
+        // // div要素を作成して追加
+        // // for (let i = 0; i < numberOfDivs; i++) {
+        // for (let i = 0; i < 8; i++) {
+        //     // // 新しいdiv要素を作成
+        //   // const newDiv = document.createElement('div');
           
-          // // id属性を設定
-          // newD
+        //   // // id属性を設定
+        //   // newD
         
-          // 要素取得
-          const newModelViewer = document.getElementById(`modeViewer-${i}`);
+        //   // 要素取得
+        //   const newModelViewer = document.getElementById(`modeViewer-${i}`);
         
-          // ARモード終了時にカメラ位置をリセットする関数
-          function resetCamera() {
-            // カメラの位置をリセット
-            newModelViewer.cameraOrbit = "0deg 75deg 2.5m";  // デフォルトのカメラオービットを設定
-            newModelViewer.cameraTarget = "0m 0m 0m"; // 必要に応じてカメラターゲットもリセット
-            newModelViewer.updateFraming(); // フレームを更新
-          }
+        //   // ARモード終了時にカメラ位置をリセットする関数
+        //   function resetCamera() {
+        //     // カメラの位置をリセット
+        //     newModelViewer.cameraOrbit = "0deg 75deg 2.5m";  // デフォルトのカメラオービットを設定
+        //     newModelViewer.cameraTarget = "0m 0m 0m"; // 必要に応じてカメラターゲットもリセット
+        //     newModelViewer.updateFraming(); // フレームを更新
+        //   }
         
-          // ARモードが終了したことを検出するイベントリスナーを追加
-          newModelViewer.addEventListener('ar-status', (event) => {
-            if (event.detail.status === 'failed' || event.detail.status === 'not-presenting') {
-              resetCamera();
-            }
-          });
+        //   // ARモードが終了したことを検出するイベントリスナーを追加
+        //   newModelViewer.addEventListener('ar-status', (event) => {
+        //     if (event.detail.status === 'failed' || event.detail.status === 'not-presenting') {
+        //       resetCamera();
+        //     }
+        //   });
         
-          // ページがフォーカスされたときにカメラ位置をリセットするためのイベントリスナー
-          window.addEventListener('focus', () => {
-            resetCamera();
-          });
-        }
+        //   // ページがフォーカスされたときにカメラ位置をリセットするためのイベントリスナー
+        //   window.addEventListener('focus', () => {
+        //     resetCamera();
+        //   });
+        // }
 </script>
 
 

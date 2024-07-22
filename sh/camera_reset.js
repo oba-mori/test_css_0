@@ -1,7 +1,7 @@
 // ARカメラリセット
 
 // 別のファイルから変数をimport
-import {numberOfDivs} from './element_create.js';
+// import {numberOfDivs} from './element_create_r1.js';
 
 // item の数
 // numberOfDivs
@@ -16,8 +16,9 @@ import {numberOfDivs} from './element_create.js';
 // export const numberOfDivs = 1;
 
 // div要素を作成して追加
-for (let i = 0; i < numberOfDivs; i++) {
-  // // 新しいdiv要素を作成
+// for (let i = 0; i < numberOfDivs; i++) {
+  for (let i = 0; i < 8; i++) {
+    // // 新しいdiv要素を作成
   // const newDiv = document.createElement('div');
   
   // // id属性を設定
