@@ -97,7 +97,7 @@
 .Div_item-class {
   background-color: rgb(243, 247, 250);
   box-sizing: border-box;
-  aspect-ratio: 2 / 3; /* アスペクト比を1:1に設定 */
+  aspect-ratio: 3 / 5; /* アスペクト比を1:1に設定 */
   
   width: 100%;    /* 幅 */
   height: 100%;    /* 高さ */
