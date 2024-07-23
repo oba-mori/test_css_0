@@ -2,7 +2,9 @@
 
 
 /* 左下の表示オブジェクトと寸法ONOFFを切り替えるボックスのデザイン、内容は下の div id="controls" の所でやっている */
-#controls {
+/* #controls  */
+#test
+{
   position: absolute; /* controlsというidがついたボックスに下記(div id="controls")の配置位置を反映 */
   bottom: 0.6rem;       /* 下からの配置位置(距離)を指定(表示領域の最下端から) */
   left: 0.6rem;         /* 左からの配置位置(距離)を指定(表示領域の最左端から) */
@@ -24,7 +26,9 @@
 }
 
 /* 寸法が入るボックス、文字のフォント、色等 */
-.dim{
+/* .dim */
+#test
+{
   background: #fff;    /* ボックスの背景色 */
   border-radius: 0.6rem;    /* border-radius:ボックスの4つのコーナーの角丸をまとめて指定 */
   box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.25);    /* box-shadow:ボックスのフレーム周辺に影を作る */
@@ -76,6 +80,7 @@
 
 
 
+
 /* itemの親要素 */
 .Div_all_item-class {
   /* background-color: rgb(234, 245, 253); */
@@ -84,7 +89,7 @@
   grid-template-columns: repeat(2, 1fr); /* 3つの列を等間隔で作成 */
 
   margin: auto; /* 中央揃えのため */
-  gap: 1rem; /* 子要素間のギャップを設定 */
+  gap: 2rem; /* 子要素間のギャップを設定 */
 
 }
 
@@ -121,7 +126,72 @@
 }
 
 
-/* div a */
+
+/* 寸法が入るボックス、文字のフォント、色等 */
+.dim
+{
+  
+  width: 55%;
+  height: 20%;
+
+  /* 左下に配置 */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  background: #fff;    /* ボックスの背景色 */
+  border-radius: 0.6rem;    /* border-radius:ボックスの4つのコーナーの角丸をまとめて指定 */
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.25);    /* box-shadow:ボックスのフレーム周辺に影を作る */
+  color: rgba(0, 0, 0, 0.8);        /* 多分要素(文字)の色 */
+  /*display: block;       /* isplay:要素の表示のされ方、block:要素が横までいっぱいに広がり、縦に並んでいく(上から、下から) */
+  font-family: Futura, Helvetica Neue, sans-serif;    /* フォント指定 */
+  font-size: 1.2rem;      /* フォントの大きさ */
+  font-weight: 700;     /* フォントの太さ */
+  /*max-width: 12.8rem;     /*内容が入る場所の幅の最大値を設定、最大値を設定すると内容の幅が一定範囲を超えない */
+  overflow-wrap: break-word;  /*  */
+  /*padding: 0.05em 0.1em;   /*  */
+  /*position: absolute;   /*  */
+  /*width: max-content;   /* 幅 */
+  /*height: max-content;  /* 高さ */
+  /*transform: translate3d(-50%, -50%, 0);   /* 内容をボックスの中央に配置したりすることが出来る */
+  --min-hotspot-opacity: 0;     /* HTML内の要素の不透明度を設定(0:完全に透明)  --min-hotspot-:非表示のホットスポットの不透明度を設定する*/
+}
+
+.show{
+  --min-hotspot-opacity: 1;     /* HTML内の要素の不透明度を設定(1:完全に不透明)  --min-hotspot-:非表示のホットスポットの不透明度を設定する*/
+}
+
+/* 寸法用の白い丸、数字を非表示にする */
+.hide{
+  display: none;  /* none:非表示 */
+}
+
+/* これにより、要素が読み込まれている間、子ノードが非表示になります */
+/*  */
+:not(:defined) > * {
+  display: none;  /* none:非表示 */
+}
+
+
+/* オブジェクトのlabel要素
+      オブジェクト表示
+      寸法ON/OFF
+*/
+.object-label
+{
+  font-size: 1.0rem;
+}
+
+
+
+
+
+
+
+
+
+
+/* div a1 */
 .Div_a_1-class{
   box-sizing: border-box;
   background-color: rgb(250, 242, 242);
@@ -132,6 +202,13 @@
   flex: 3; /* 高さの比率を設定 */
 }
 
+
+/* div a2 */
+.Div_a_2-class{
+  display: none;
+  box-sizing: border-box;
+
+}
 
 
 
@@ -147,11 +224,12 @@
 
 /* <!-- AR起動ボタンのデザイン --> */
 /* #custom-ar-button */
-.custom-ar-button
+/* .custom-ar-button */
+.test
 {     
   /* ボックスの大きさ */ 
-  /*width: 12.0rem;    /* 幅 */
-  /*height: 4.0rem;    /* 高さ */
+  width: 12.0rem;    /* 幅 */
+  height: 4.0rem;    /* 高さ */
 
   /* ボックスの位置 */
   bottom: 1.6rem;         /* 下からの配置位置(距離)を指定(表示領域の最下端から) */
@@ -169,5 +247,29 @@
 
   /*？ これがないと指定した位置ではなく、左上に配置される 理由は分からない*/
   position: absolute;   /* custom-ar-buttonというidがついたボックスに下記(div id="custom-ar-button")の配置位置を反映 */
+}
+
+.custom-ar-button
+{     
+  /* ボックスの大きさ */ 
+  width: 35%;
+  height: 15%;
+
+  /* ボックスの位置 */
+  /* 右下に配置 */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+
+  /* ボックスのカスタマイズ */
+  border-radius: 0.6rem;   /* border-radius:ボックスの4つのコーナーの角丸をまとめて指定 */
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.25);  /* box-shadow:ボックスのフレーム周辺に影を作る */         
+  background-color: white;  /* background:ボックスの背景色指定 */
+  
+  /* フォント */
+  font-family: Futura, Helvetica Neue, sans-serif;    /* フォント指定 */
+  font-size: 1.6rem;      /* フォントの大きさ */
+  font-weight: 400;     /* フォントの太さ */
 }
 
