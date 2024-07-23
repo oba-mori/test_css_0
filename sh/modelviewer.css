@@ -150,23 +150,22 @@
 
 .dim-controls
 {
-  width: 55%;
-  height: 20%;
+  max-width: 60%;
+  max-height: 30%;
 
   /* 左下に配置 */
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 0.6rem;
+  left: 0.6rem;
 
-
-  background: #fff;    /* ボックスの背景色 */
+  background: rgba(255, 255, 255, 0.8);    /* ボックスの背景色 */
   border-radius: 0.6rem;    /* border-radius:ボックスの4つのコーナーの角丸をまとめて指定 */
   box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.25);    /* box-shadow:ボックスのフレーム周辺に影を作る */
   color: rgba(0, 0, 0, 0.8);        /* 多分要素(文字)の色 */
   display: block;       /* isplay:要素の表示のされ方、block:要素が横までいっぱいに広がり、縦に並んでいく(上から、下から) */
   font-family: Futura, Helvetica Neue, sans-serif;    /* フォント指定 */
   font-size: 1.2rem;      /* フォントの大きさ */
-  font-weight: 700;     /* フォントの太さ */
+  font-weight: 600;     /* フォントの太さ */
   /*max-width: 12.8rem;     /*内容が入る場所の幅の最大値を設定、最大値を設定すると内容の幅が一定範囲を超えない */
   /*overflow-wrap: break-word;  /*  */
   /*padding: 0.05em 0.1em;   /*  */
@@ -176,6 +175,26 @@
   /*transform: translate3d(-50%, -50%, 0);   /* 内容をボックスの中央に配置したりすることが出来る */
   /*--min-hotspot-opacity: 0;     /* HTML内の要素の不透明度を設定(0:完全に透明)  --min-hotspot-:非表示のホットスポットの不透明度を設定する*/
 }
+.dim-controls {
+  max-width: 60%;
+  max-height: 30%;
+
+  position: absolute;
+  bottom: 0.6rem;
+  left: 0.6rem;
+
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 0.6rem;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.25);
+  color: rgba(0, 0, 0, 0.8);
+  display: block;
+  font-family: Futura, Helvetica Neue, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  
+}
+
 
 
 
