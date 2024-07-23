@@ -57,7 +57,7 @@ function dot()
     // div要素を作成
     const controlsDiv = document.createElement('div');
     controlsDiv.id = 'controls';
-    controlsDiv.classList.add('dim'); // 'dim' クラスを追加
+    // controlsDiv.classList.add('dim'); // 'dim' クラスを追加
     controlsDiv.classList.add('dim-controls'); // 'dim' クラスを追加
 
     // 表示オブジェクトのラベルを作成
