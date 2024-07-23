@@ -72,26 +72,75 @@
 
 
 
+
+
+
+
 /* itemの親要素 */
 .Div_all_item-class {
-  display: flex;
-  flex-wrap: wrap;
+  /* background-color: rgb(234, 245, 253); */
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 3つの列を等間隔で作成 */
+
+  margin: auto; /* 中央揃えのため */
+  gap: 1rem; /* 子要素間のギャップを設定 */
+
 }
 
-/* 子要素 */
+/* 子要素(modelviewer,aタグまとめ) */
 .Div_item-class {
-  width: calc(50% - 0.1rem); /* 2列にするために幅を50%に設定し、余白を引く */
-  height: 30rem;
-  margin: 0.5rem; /* 子要素間の余白を設定 */
-  box-sizing: border-box; /* パディングやボーダーを含めた幅の計算 */
-  background-color: lightgrey; /* 見やすくするための背景色（オプション） */
+  background-color: rgb(243, 247, 250);
+  box-sizing: border-box;
+  aspect-ratio: 2 / 3; /* アスペクト比を1:1に設定 */
+  
+  width: 100%;    /* 幅 */
+  height: 100%;    /* 高さ */
+
+  display: flex;
+  flex-direction: column; /* 縦並びにする */
+  
+}
+
+/* div modelViewer */
+.Div_mv-class{
+  box-sizing: border-box;
+
+  background-color: rgb(248, 247, 237);
+  width: 100%;    /* 幅 */
+  /*height: 70%;    /* 高さ */
+  flex: 7; /* 高さの比率を設定 */
 }
 
 /* modelViewer */
 .mv{
-  /*width: 18rem;    /* 幅 */
-  /*height: 30rem;    /* 高さ */
+  background-color: rgb(237, 248, 236);
+
+  width: 100%;    /* 幅 */
+  height: 100%;    /* 高さ */
 }
+
+
+/* div a */
+.Div_a_1-class{
+  box-sizing: border-box;
+  background-color: rgb(250, 242, 242);
+
+  width: 100%;    /* 幅 */
+  /*height: 30%;    /* 高さ */
+  /*height: 70%;    /* 高さ */
+  flex: 3; /* 高さの比率を設定 */
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -101,8 +150,8 @@
 .custom-ar-button
 {     
   /* ボックスの大きさ */ 
-  width: 12.0rem;    /* 幅 */
-  height: 4.0rem;    /* 高さ */
+  /*width: 12.0rem;    /* 幅 */
+  /*height: 4.0rem;    /* 高さ */
 
   /* ボックスの位置 */
   bottom: 1.6rem;         /* 下からの配置位置(距離)を指定(表示領域の最下端から) */
