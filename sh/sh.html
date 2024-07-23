@@ -110,7 +110,10 @@
       <script>
         document.getElementById('toggleButton').addEventListener('click', function() {
           const gridContainer = document.querySelectorAll('.Div_all_item-class');
-          gridContainer.classList.toggle('one-column');
+          
+          gridContainers.forEach(container => {
+            container.classList.toggle('one-column');
+          });        
         });
       </script>
       <style>
