@@ -161,16 +161,18 @@
 
 <!-- 確認 -->
 <script>
-  document.getElementById('toggleButton').addEventListener('click', function() {
-    const gridContainer = document.querySelectorAll('.Div_all_item-class');
-    
-    gridContainers.forEach(container => {
-      container.classList.toggle('one-column');
-    });        
+  document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('toggleButton').addEventListener('click', function() {
+          const gridContainers = document.querySelectorAll('.Div_all_item-class'); // 変数名を一致させる
+
+          gridContainers.forEach(container => {
+              container.classList.toggle('one-column');
+          });
+      });
   });
 </script>
 <style>
-  .one-column {
+  .Div_all_item-class.one-column {
     grid-template-columns: 1fr; /* 1列 */
   }   
 </style>
