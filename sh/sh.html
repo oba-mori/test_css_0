@@ -107,21 +107,7 @@
 
       <!-- 確認 -->
       <button id="toggleButton">Toggle Grid Layout</button>
-      <script>
-        document.getElementById('toggleButton').addEventListener('click', function() {
-          const gridContainer = document.querySelectorAll('.Div_all_item-class');
-          
-          gridContainers.forEach(container => {
-            container.classList.toggle('one-column');
-          });        
-        });
-      </script>
-      <style>
-        .one-column {
-          grid-template-columns: 1fr; /* 1列 */
-        }   
-      </style>
-      
+
 
 
 
@@ -171,6 +157,23 @@
 
 
 
+
+
+<!-- 確認 -->
+<script>
+  document.getElementById('toggleButton').addEventListener('click', function() {
+    const gridContainer = document.querySelectorAll('.Div_all_item-class');
+    
+    gridContainers.forEach(container => {
+      container.classList.toggle('one-column');
+    });        
+  });
+</script>
+<style>
+  .one-column {
+    grid-template-columns: 1fr; /* 1列 */
+  }   
+</style>
 
 
 
