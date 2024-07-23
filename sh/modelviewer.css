@@ -114,7 +114,7 @@
   background-color: rgb(248, 247, 237);
   width: 100%;    /* 幅 */
   /*height: 70%;    /* 高さ */
-  flex: 7; /* 高さの比率を設定 */
+  flex: 8; /* 高さの比率を設定 */
 }
 
 /* modelViewer */
@@ -131,23 +131,13 @@
 /* #controls  */
 .test
 {
-  /*position: absolute; /* controlsというidがついたボックスに下記(div id="controls")の配置位置を反映 */
-  /*bottom: 0.6rem;       /* 下からの配置位置(距離)を指定(表示領域の最下端から) */
-  /*left: 0.6rem;         /* 左からの配置位置(距離)を指定(表示領域の最左端から) */
-  /*max-width: unset;   /* 下記(div id="controls")で設定する内容が入る場所の幅の最大値を設定、最大値を設定すると内容の幅が一定範囲を超えない */
-  /*transform: unset;   /* 内容をボックスの中央に配置したりすることが出来る */
-
-  
-  width: 55%;
-  height: 20%;
-
-  /* 左下に配置 */
-  position: absolute;
-  bottom: 0;
-  left: 0;
-
-}
-
+  position: absolute; /* controlsというidがついたボックスに下記(div id="controls")の配置位置を反映 */
+  bottom: 0.6rem;     /* 下からの配置位置(距離)を指定(表示領域の最下端から) */
+  left: 0.6rem;       /* 左からの配置位置(距離)を指定(表示領域の最左端から) */
+  max-width: unset;   /* 下記(div id="controls")で設定する内容が入る場所の幅の最大値を設定、最大値を設定すると内容の幅が一定範囲を超えない */
+  transform: unset;   /* 内容をボックスの中央に配置したりすることが出来る */
+} 
+/* 寸法が入るボックス、文字のフォント、色等 */
 .dim-controls
 {
   max-width: 60%;
@@ -175,43 +165,8 @@
   /*transform: translate3d(-50%, -50%, 0);   /* 内容をボックスの中央に配置したりすることが出来る */
   /*--min-hotspot-opacity: 0;     /* HTML内の要素の不透明度を設定(0:完全に透明)  --min-hotspot-:非表示のホットスポットの不透明度を設定する*/
 }
-.dim-controls {
-  max-width: 60%;
-  max-height: 30%;
 
-  position: absolute;
-  bottom: 0.6rem;
-  left: 0.6rem;
-
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 0.6rem;
-  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.25);
-  color: rgba(0, 0, 0, 0.8);
-  display: block;
-  font-family: Futura, Helvetica Neue, sans-serif;
-  font-size: 1.2rem;
-  font-weight: 600;
-
-  
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* 寸法が入るボックス */
 .dim
 {
   background: #fff;    /* ボックスの背景色 */
@@ -274,7 +229,7 @@
   width: 100%;    /* 幅 */
   /*height: 30%;    /* 高さ */
   /*height: 70%;    /* 高さ */
-  flex: 3; /* 高さの比率を設定 */
+  flex: 2; /* 高さの比率を設定 */
 }
 
 
