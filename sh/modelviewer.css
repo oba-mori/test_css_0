@@ -90,7 +90,7 @@
 
   margin: auto; /* 中央揃えのため */
   gap: 2rem; /* 子要素間のギャップを設定 */
-
+  padding:2rem;
 }
 
 /* 子要素(modelviewer,aタグまとめ) */
