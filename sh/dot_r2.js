@@ -29,17 +29,17 @@ function dot()
     //寸法点、寸法
     // ボタンを作成するためのデータ
     const buttonsData = [
-      { slot: 'hotspot-dot+X-Y+Z', class: 'dot', dataPosition: '1 -1 1', dataNormal: '1 0 0' },
-      { slot: 'hotspot-dim+X-Y', class: 'dim', dataPosition: '1 -1 0', dataNormal: '1 0 0' },
-      { slot: 'hotspot-dot+X-Y-Z', class: 'dot', dataPosition: '1 -1 -1', dataNormal: '1 0 0' },
-      { slot: 'hotspot-dim+X-Z', class: 'dim', dataPosition: '1 0 -1', dataNormal: '1 0 0' },
-      { slot: 'hotspot-dot+X+Y-Z', class: 'dot show', dataPosition: '1 1 -1', dataNormal: '0 1 0' },
-      { slot: 'hotspot-dim+Y-Z', class: 'dim show', dataPosition: '0 -1 -1', dataNormal: '0 1 0' },
-      { slot: 'hotspot-dot-X+Y-Z', class: 'dot show', dataPosition: '-1 1 -1', dataNormal: '0 1 0' },
-      { slot: 'hotspot-dim-X-Z', class: 'dim', dataPosition: '-1 0 -1', dataNormal: '-1 0 0' },
-      { slot: 'hotspot-dot-X-Y-Z', class: 'dot', dataPosition: '-1 -1 -1', dataNormal: '-1 0 0' },
-      { slot: 'hotspot-dim-X-Y', class: 'dim', dataPosition: '-1 -1 0', dataNormal: '-1 0 0' },
-      { slot: 'hotspot-dot-X-Y+Z', class: 'dot', dataPosition: '-1 -1 1', dataNormal: '-1 0 0' }
+      { slot: 'hotspot-dot+X-Y+Z', class: 'dimensions dot', dataPosition: '1 -1 1', dataNormal: '1 0 0' },
+      { slot: 'hotspot-dim+X-Y', class: 'dimensions dim', dataPosition: '1 -1 0', dataNormal: '1 0 0' },
+      { slot: 'hotspot-dot+X-Y-Z', class: 'dimensions dot', dataPosition: '1 -1 -1', dataNormal: '1 0 0' },
+      { slot: 'hotspot-dim+X-Z', class: 'dimensions dim', dataPosition: '1 0 -1', dataNormal: '1 0 0' },
+      { slot: 'hotspot-dot+X+Y-Z', class: 'dimensions dot show', dataPosition: '1 1 -1', dataNormal: '0 1 0' },
+      { slot: 'hotspot-dim+Y-Z', class: 'dimensions dim show', dataPosition: '0 -1 -1', dataNormal: '0 1 0' },
+      { slot: 'hotspot-dot-X+Y-Z', class: 'dimensions dot show', dataPosition: '-1 1 -1', dataNormal: '0 1 0' },
+      { slot: 'hotspot-dim-X-Z', class: 'dimensions dim', dataPosition: '-1 0 -1', dataNormal: '-1 0 0' },
+      { slot: 'hotspot-dot-X-Y-Z', class: 'dimensions dot', dataPosition: '-1 -1 -1', dataNormal: '-1 0 0' },
+      { slot: 'hotspot-dim-X-Y', class: 'dimensions dim', dataPosition: '-1 -1 0', dataNormal: '-1 0 0' },
+      { slot: 'hotspot-dot-X-Y+Z', class: 'dimensions dot', dataPosition: '-1 -1 1', dataNormal: '-1 0 0' }
     ];
 
     // 各ボタンを作成し、親要素に追加
@@ -138,8 +138,9 @@ function dot()
 
     /* チェック欄のチェックをON/OFFした時、寸法表示/非表示切り替え */
     checkbox.addEventListener('change', () => {                     //チェック欄のチェックをON/OFFした時
-      mv_element[i].querySelectorAll('button').forEach((hotspot) => {   //
-        if (checkbox.checked) {             //チェック欄にチェックが入っている時
+      // mv_element[i].querySelectorAll('button').forEach((hotspot) => {   //button要素を全て表示・非表示
+      mv_element[i].querySelectorAll('.dimensions').forEach((hotspot) => { // dimensionsクラスを持つ要素を選択
+          if (checkbox.checked) {             //チェック欄にチェックが入っている時
           console.log(i,':ON');
           hotspot.classList.remove('hide');     //表示
         } else {                            //チェック欄にチェックが入っていない時
