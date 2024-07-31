@@ -44,7 +44,7 @@
     <!-- <script src="./sample_script_preview.js"></script> -->
 
     <!-- レイアウト -->
-    <link rel="stylesheet" href="./top.css">
+    <!-- <link rel="stylesheet" href="./top.css"> -->
 
     <!-- 設定用レイアウト -->
     <link rel="stylesheet" href="../common/setting.css">
@@ -93,136 +93,35 @@
 
 
 
+
       <!-- メイン -->
       <main>
-        <div class="kakomi">
-          <!-- --------------------------------------------------------------------- -->
-          <!-- タイトル -->
-          <div class="title">
-            <!-- タイトル画像 -->
-            <div class="img-0">
-              <a class="img-0-0">
-                <!-- <img class="img-0-0-0" src="../img/title_img.png"> -->
-              </a>            
+        <!-- 全体 -->
+        <div class="class" id="all">
+
+          <!-- カテゴリまとめ -->
+          <div class="class" id="category">
+            <!-- カテゴリ1 -->
+            <div class="category-class" id="category-1">
+              <a class="a-class"  id="category-1-a-id" href="../pr/pr.html">PR</a>
+              <p class="p-class"  id="category-1-p-id">pr-letter</p>
             </div>
 
-            <!-- タイトル文字 -->
-            <div class="title-letter">
-              <p class="title-image-caption">input</p>
-            </div>
-          </div>
-
-
-
-          <!-- --------------------------------------------------------------------- -->
-          <!-- 紹介文 -->
-          <div class="introducing">
-            <!-- 紹介文画像0 -->
-            <div class="img-0-introducing-div">
-              <a class="img-0-introducing-a">
-                <!-- <img class="img-0-0-0" src="../img/title_img.png"> -->
-              </a>            
+            <!-- カテゴリ2 -->
+            <div class="category-class" id="category-2">
+              <a class="a-class"  id="category-2-a-id" href="../en/en.html">EN</a>
+              <p class="p-class"  id="category-2-p-id">en-letter</p>
             </div>
 
-            <!-- 紹介文画像1 -->
-            <div class="img-1-introducing-div">
-              <a class="img-1-introducing-a">
-                <!-- <img class="img-0-0-0" src="../img/title_img.png"> -->
-              </a>            
-            </div>
-
-            
-
-            <!-- 紹介文文字 -->
-            <div class="intro-letter-div">
-              <!-- 大文字 -->
-              <div class="d-intro-letter-caption-big">
-                <p class="p-intro-letter-caption-big">Introduction</p>
-              </div>
-
-              <!-- 小文字 -->
-              <div class="d-intro-letter-caption-small">
-                <p class="p-intro-letter-caption-small"> Image Caption Intro Text1</p>
-              </div>
+            <!-- カテゴリ3 -->
+            <div class="category-class" id="category-3">
+              <a class="a-class" id="category-3-a-id" href="../sh/sh.html">SH</a>
+              <p class="p-class"  id="category-3-p-id">sh-letter</p>
             </div>
           </div>
-
-
-          <!-- --------------------------------------------------------------------- -->
-          <!-- サイト説明 ABOUT -->
-          <div class="explanation-about">
-            <!-- 紹介文画像 -->
-            <div class="img-explanation-about-div">
-              <a class="img-explanation-about-a">
-                <!-- <img class="img-0-0-0" src="../img/title_img.png"> -->
-              </a>            
-            </div>
-
-            <!-- 紹介文文字 -->
-            <div class="explanation-about-letter-a">
-              <!-- 大文字 -->
-              <div class="explanation-about-letter-caption-big-d">
-                <a class="explanation-about-letter-caption-big-a" href="../pr/pr.html">PR</a>
-              </div>
-              <!-- 小文字 -->
-              <div class="explanation-about-letter-caption-small-d">
-                <p class="explanation-about-letter-caption-small-p"> Image Caption Intro Text</p>
-              </div>
-            </div>
-          </div>
-
-
-          <!-- --------------------------------------------------------------------- -->
-          <!-- サイト説明 GALLERY -->
-          <div class="explanation-gallery">
-            <!-- 紹介文画像 -->
-            <div class="img-explanation-gallery-div">
-              <a class="img-explanation-gallery-a">
-                <!-- <img class="img-0-0-0" src="../img/title_img.png"> -->
-              </a>            
-            </div>
-
-            <!-- 紹介文文字 -->
-            <div class="explanation-gallery-letter-a">
-              <!-- 大文字 -->
-              <div class="explanation-gallery-letter-caption-big-d">
-                <a class="explanation-gallery-letter-caption-big-a" href="../en/en.html">EN</a>
-              </div>
-              <!-- 小文字 -->
-              <div class="explanation-gallery-letter-caption-small-d">
-                <p class="explanation-gallery-letter-caption-small-p"> Image Caption Intro Text</p>
-              </div>
-            </div>
-          </div>
-
-
-          <!-- --------------------------------------------------------------------- -->
-          <!-- サイト説明 POST -->
-          <div class="explanation-post">
-            <!-- 紹介文画像 -->
-            <div class="img-explanation-post-div">
-              <a class="img-explanation-post-a">
-                <!-- <img class="img-0-0-0" src="../img/title_img.png"> -->
-              </a>            
-            </div>
-
-            <!-- 紹介文文字 -->
-            <div class="explanation-post-letter-a">
-              <!-- 大文字 -->
-              <div class="explanation-post-letter-caption-big-d">
-                <a class="explanation-post-letter-caption-big-a" href="../sh/sh.html">SH</a>
-              </div>
-              <!-- 小文字 -->
-              <div class="explanation-post-letter-caption-small-d">
-                <p class="explanation-post-letter-caption-small-p"> Image Caption Intro Text</p>
-              </div>
-            </div>
-          </div>
-
-
-
         </div>
       </main>
+
 
 
 
@@ -239,9 +138,80 @@
 
 
 <style>
-  .title {
+/* --------------------------------------------------------------------- */
+/* 大枠 */
+#all
+{
+  display: grid;
+  grid-template-columns: 1fr; /* 横並び、1要素で次の列 */
 
-  }
+  width:90%;
+  margin:auto;  /*中央揃え*/
+}
+
+/* --------------------------------------------------------------------- */
+/* カテゴリ一括 */
+.category-class
+{
+  display: grid;
+  grid-template-rows: 1fr 2fr; /* 縦並び、比率1:2 */
+
+  width:100%;
+  aspect-ratio: 3 / 4;  /* アスペクト比固定 幅/高さ */
+  
+  text-align: center; /* 横方向の中央揃え */
+  /*justify-items: center; /* 横方向の中央揃え */
+}
+
+/* --------------------------------------------------------------------- */
+/* a一括 */
+.a-class {
+  display: inline-block; /* <a> タグをインラインブロック要素にする */
+  width: 100%; /* 幅を親要素に合わせる */
+  /*height: 100px; /* 高さを設定（必要に応じて調整） */
+  /*background-image: url('../image/blue.png'); /* 背景画像を設定 */
+  background-size: cover; /* 画像が要素全体をカバーするようにする */
+  /*background-position: center; /* 画像を中央に配置 */
+  /*text-align: center; /* テキストを横方向に中央揃え */
+  /*line-height: 100px; /* 高さに合わせてテキストを縦方向に中央揃え */
+  color: white; /* テキストカラーの設定（必要に応じて変更） */
+  text-decoration: none; /* テキストの下線を削除 */
+  font-family: 'Courier New', Courier, monospace; /* フォントファミリ */
+}
+
+/* aタグ個別 */
+#category-1-a-id
+{
+  /*background-image: url('../image/yellow.png'); /* 背景画像を設定 */
+  background-color: rgb(0, 0, 0);
+}
+
+/* aタグ個別 */
+#category-2-a-id
+{
+  /*background-image: url('../image/blue.png'); /* 背景画像を設定 */
+  background-color: rgb(0, 0, 0);
+}
+
+/* aタグ個別 */
+#category-3-a-id
+{
+  /*background-image: url('../image/green.png'); /* 背景画像を設定 */
+  background-color: rgb(0, 0, 0);
+}
+
+
+
+
+/* --------------------------------------------------------------------- */
+/* p一括 */
+.p-class {
+  /*grid-row: 2; /* 下部の行に配置 */
+  /*text-align: center; /* テキストを中央揃え */
+  /*color: black; /* テキストカラーの設定 */
+}
+
+
 
 
 
