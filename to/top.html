@@ -103,24 +103,32 @@
           <div class="class" id="category">
             <!-- カテゴリ1 -->
             <div class="category-class" id="category-1">
-              <a class="a-class"  id="category-1-a-id" href="../pr/pr.html">PR</a>
+              <div class="category-d-a-class" id="category-d-a-1">
+                <a class="a-class"  id="category-1-a-id" href="../pr/pr.html">P R</a>
+              </div>
               <p class="p-class"  id="category-1-p-id">pr-letter</p>
             </div>
 
             <!-- カテゴリ2 -->
             <div class="category-class" id="category-2">
-              <a class="a-class"  id="category-2-a-id" href="../en/en.html">EN</a>
+              <div class="category-d-a-class" id="category-d-a-2">
+                <a class="a-class"  id="category-2-a-id" href="../en/en.html">EN</a>
+              </div>
               <p class="p-class"  id="category-2-p-id">en-letter</p>
             </div>
 
             <!-- カテゴリ3 -->
             <div class="category-class" id="category-3">
-              <a class="a-class" id="category-3-a-id" href="../sh/sh.html">SH</a>
+              <div class="category-d-a-class" id="category-d-a-3">
+                <a class="a-class" id="category-3-a-id" href="../sh/sh.html">SH</a>
+              </div>
               <p class="p-class"  id="category-3-p-id">sh-letter</p>
             </div>
           </div>
         </div>
       </main>
+
+
 
 
 
@@ -138,6 +146,13 @@
 
 
 <style>
+
+body
+{
+  font-family: 'Open Sans', sans-serif; /* フォントファミリ */
+}
+
+
 /* --------------------------------------------------------------------- */
 /* 大枠 */
 #all
@@ -154,15 +169,44 @@
 .category-class
 {
   display: grid;
-  grid-template-rows: 1fr 2fr; /* 縦並び、比率1:2 */
+  grid-template-rows: 1fr 2fr;  /* 縦並び、比率1:2 */
 
   width:100%;
   aspect-ratio: 3 / 4;  /* アスペクト比固定 幅/高さ */
   
-  text-align: center; /* 横方向の中央揃え */
-  place-items: center; /* 縦横の中央揃え */
-  /*justify-items: center; /* 横方向の中央揃え */
+  text-align: center;   /* 横方向の中央揃え */
+  place-items: center;  /* 縦横の中央揃え */
+  /*justify-items: center;  /* 横方向の中央揃え */
 }
+
+
+/* --------------------------------------------------------------------- */
+/* a用div一括 */
+.category-d-a-class
+{
+  width:100%;
+  
+}
+
+/* a用div個別 */
+#category-d-a-1
+{
+  background-color: rgb(0, 0, 0);
+
+}
+
+#category-d-a-2
+{
+  background-color: rgb(0, 0, 0);
+
+}
+
+#category-d-a-3
+{
+  background-color: rgb(0, 0, 0);
+
+}
+
 
 /* --------------------------------------------------------------------- */
 /* a一括 */
@@ -171,13 +215,13 @@
   width: 100%; /* 幅を親要素に合わせる */
   /*height: 100px; /* 高さを設定（必要に応じて調整） */
   /*background-image: url('../image/blue.png'); /* 背景画像を設定 */
-  background-size: cover; /* 画像が要素全体をカバーするようにする */
+  /*background-size: cover; /* 画像が要素全体をカバーするようにする */
   /*background-position: center; /* 画像を中央に配置 */
   /*text-align: center; /* テキストを横方向に中央揃え */
   /*line-height: 100px; /* 高さに合わせてテキストを縦方向に中央揃え */
   color: white; /* テキストカラーの設定（必要に応じて変更） */
   text-decoration: none; /* テキストの下線を削除 */
-  font-family: 'Open Sans', sans-serif; /* フォントファミリ */
+  /*font-family: 'Open Sans', sans-serif; /* フォントファミリ */
   font-size: 5rem;
 }
 
@@ -185,21 +229,21 @@
 #category-1-a-id
 {
   /*background-image: url('../image/yellow.png'); /* 背景画像を設定 */
-  background-color: rgb(0, 0, 0);
+  /* background-color: rgb(0, 0, 0); */
 }
 
 /* aタグ個別 */
 #category-2-a-id
 {
   /*background-image: url('../image/blue.png'); /* 背景画像を設定 */
-  background-color: rgb(0, 0, 0);
+  /* background-color: rgb(0, 0, 0); */
 }
 
 /* aタグ個別 */
 #category-3-a-id
 {
   /*background-image: url('../image/green.png'); /* 背景画像を設定 */
-  background-color: rgb(0, 0, 0);
+  /* background-color: rgb(0, 0, 0); */
 }
 
 
