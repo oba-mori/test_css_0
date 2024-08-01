@@ -1,0 +1,66 @@
+
+
+      <!-- ヘッダー -->
+      <header> 
+        <div class="header-div">
+          <div class="header-div-image"></div>
+          <p class="header-p">hd</p>
+          <!-- ヘッダー表示切替ボタン -->
+          <button id="toggle-header-button">onoff</button>    
+        </div>
+        
+
+        <!-- ナビゲーションバー -->
+        <nav id="main-header" class="navigation-header" hidden>
+          <!-- 順序がないリスト(箇条書き) -->
+          <ul>
+            <!-- トップ -->
+            <li class="ber_top">
+              <a href="../to/top.html">
+                TO
+              </a>
+            </li>
+
+            
+            <!-- 概要 -->
+            <li class="ber_about">
+              <a href="../pr/pr.html">
+                PR
+              </a>
+            </li>
+
+            
+            <!--  -->
+            <li class="ber_gallery">
+              <!-- <a href="./index_museum.html"> -->
+              <a href="../en/en.html">
+                EN
+              </a>
+            </li>
+
+
+            <!--  -->
+            <li class="ber_post">
+              <!-- <a href="./index_post.html"> -->
+              <a href="../sh/sh.html">                
+                SH
+              </a>
+            </li>
+          </ul>      
+        </nav>
+      </header>
+
+
+      
+
+      <script>        
+        // ヘッダーの表示/非表示を切り替える
+        document.getElementById('toggle-header-button').addEventListener('click', function() {
+            var header = document.getElementById('main-header');
+            if (header.hasAttribute('hidden')) {
+                header.removeAttribute('hidden'); // 表示
+            } else {
+                header.setAttribute('hidden', ''); // 非表示
+            }
+        });      
+      </script>
