@@ -53,14 +53,28 @@
 
       
 
-      <script>        
-        // ヘッダーの表示/非表示を切り替える
+      <script>
         document.getElementById('toggle-header-button').addEventListener('click', function() {
             var header = document.getElementById('main-header');
-            if (header.hasAttribute('hidden')) {
-                header.removeAttribute('hidden'); // 表示
+            if (header.classList.contains('show')) {
+                // アニメーションでフェードアウト
+                header.classList.remove('show');
+                // トランジションの時間が経過してから完全に非表示にする
+                setTimeout(function() {
+                    header.style.display = 'none'; // 非表示に設定
+                }, 500); // トランジションの時間に合わせる
             } else {
-                header.setAttribute('hidden', ''); // 非表示
+                // 初期状態を設定
+                header.style.display = 'block'; // 表示に設定
+                // 少し遅らせてからアニメーションを開始
+                setTimeout(function() {
+                    header.classList.add('show');
+                }, 10); // 少し遅らせることでアニメーションが適用されるようにする
             }
-        });      
-      </script>
+        });
+    </script>
+    
+    
+    
+    
+    
