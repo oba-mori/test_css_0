@@ -103,8 +103,9 @@
               </a>
 
               <!-- image -->
-              <a href="" class="brand">
-                <img class="brand-img" src="" alt="">
+              <!-- <a href="../image/log.jpg" class="brand"> -->
+                <a href="" class="brand">
+                  <img class="brand-img" src="../image/log.png" alt="">
               </a>
 
               <!-- リスト -->
@@ -243,14 +244,20 @@ body
 }
 
 
-/* 画像用a */
+/* 画像用 a */
 .brand{
+  display: inline-block;
+  min-width: 10rem;
+  height: 90%;
+  margin-top: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-left: 10rem;
 }
 
-.brand-img{
-  width: 20rem;
-  height: 90%;
+.brand-img{  
   background-color: rgb(230, 230, 230);
+  object-fit: cover; /* 画像を親要素にフィットさせる */
 }
 
 
