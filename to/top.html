@@ -70,7 +70,7 @@
 
     <!-- ヘッダーファイル読み込み用JS -->
     <!-- <script type="text/javascript" src="../common/header.js"></script> -->
-    <script type="text/javascript" src="../common/header_r1.js"></script>
+    <!-- <script type="text/javascript" src="../common/header_r1.js"></script> -->
 
     <!-- フッターファイル読み込み用JS -->
     <script type="text/javascript" src="../common/footer.js"></script>
@@ -87,12 +87,55 @@
     <!-- ヘッダー、メイン、フッターを並べるクラス -->
     <div class="wrapper">
 
-      
+
+
+      <!-- ヘッダー -->
+      <header> 
+        <div class="navbar navbar-fixed-top" id="navigation">
+          <div class="navbar-inner">
+            <div class="container">
+
+              <!-- Button -->
+              <a class="btn btn-navbar" id="toggle-header-button"> 
+                <span class="icon-bar"></span> 
+                <span class="icon-bar"></span> 
+                <span class="icon-bar"></span> 
+              </a>
+
+              <!-- image -->
+              <a href="" class="brand">
+                <img class="brand-img" src="" alt="">
+              </a>
+
+              <!-- リスト -->
+              <div class="nav-collapse">
+                <ul class="nav pull-right">
+                  <!-- <li class="active"><a href="#intro">Home</a></li> -->
+                  <li><a href="../to/top.html">Hn</a></li>
+                  <li><a href="../pr/pr.html">Pr</a></li>
+                  <li><a href="../en/en.html">En</a></li>
+                  <li><a href="../sh/sh.html">Sho</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>  
+      </header>
 
 
 
-
-
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          document.getElementById('toggle-header-button').addEventListener('click', function() {
+            var navCollapse = document.querySelector('.nav-collapse');
+            if (navCollapse.classList.contains('show')) {
+                navCollapse.classList.remove('show'); // ナビゲーションバーを非表示にする
+            } else {
+                navCollapse.classList.add('show'); // ナビゲーションバーを表示する
+            }
+          });
+        });
+      </script>
 
 
 
@@ -170,62 +213,90 @@ body
 }
 
 
-/* --------------------------------------------------------------------- */
-/* 大枠 */
-#all
-{
-  display: grid;
-  grid-template-columns: 1fr; /* 横並び、1要素で次の列 */
-
-  width:90%;
-  margin:auto;  /*中央揃え*/
-}
-
-/* --------------------------------------------------------------------- */
-/* カテゴリ一括 */
-.category-class
-{
-  display: grid;
-  /*grid-template-rows: 1fr 2fr;  /* 縦並び、比率1:2 */
-
-  width:100%;
-  /*aspect-ratio: 3 / 4;  /* アスペクト比固定 幅/高さ */
-  
-  text-align: center;   /* 横方向の中央揃え */
-  place-items: center;  /* 縦横の中央揃え */
-  /*justify-items: center;  /* 横方向の中央揃え */
+.container{
+  height: 5rem;
 }
 
 
 /* --------------------------------------------------------------------- */
+/* ナビゲーションバー */
+/* ボタンのアイコンバーを適切に表示 */
+/* .navbar .btn-navbar {
+    float: right;
+    padding: 12px 12px;
+    margin: 12px 0;
+} */
+
+
+.btn-navbar {
+    display: inline-block;
+    width: auto;
+    padding: 10px; /* 必要に応じてパディングを調整 */
+}
+.icon-bar {
+    display: block;
+    width: 22px; /* 必要に応じて幅を調整 */
+    height: 2px; /* 必要に応じて高さを調整 */
+    background-color: #000; /* アイコンバーの色を設定 */
+    margin: 4px 0; /* アイコンバーの間隔を設定 */
+}
+
+
+/* 画像用a */
+.brand{
+}
+
+.brand-img{
+  width: 20rem;
+  height: 90%;
+  background-color: rgb(230, 230, 230);
+}
+
+
+
+
+
+/* ナビゲーションバーの初期状態を非表示に設定 */
+.nav-collapse {
+  background-color: rgba(255, 255, 255, 1);
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease; /* 高さのトランジションを設定 */
+}
+/* ナビゲーションバーが表示される状態 */
+.nav-collapse.show {
+    max-height: 500px; /* 最大高さを設定、必要に応じて調整 */
+}
+/* ナビゲーションバーのリストスタイルの調整 */
+.nav {
+    list-style: none; /* 箇条書きのマーカーを非表示 */
+    padding: 0; /* 内部余白を削除 */
+    margin: 0; /* 外部余白を削除 */
+}
+.nav li {
+    padding: 10px 0; /* 必要に応じて調整 */
+}
+.nav li {
+  text-decoration: none;  /* 下線消す */
+  text-align: center;  /* 中央揃え */
+}
+
+
+/* --------------------------------------------------------------------- */
+
+/* カテゴリ */
+.class
+{
+  text-align: center;
+}
+
 /* a用div一括 */
 .category-d-a-class
 {
-  width:100%;
-  
+  background-color: rgb(0, 0, 0)
 }
 
-/* a用div個別 */
-#category-d-a-1
-{
-  /* background-color: rgb(0, 0, 0); */
-
-}
-
-#category-d-a-2
-{
-  /* background-color: rgb(0, 0, 0); */
-
-}
-
-#category-d-a-3
-{
-  /* background-color: rgb(0, 0, 0); */
-
-}
-
-
-/* --------------------------------------------------------------------- */
+/* カテゴリ */
 /* a一括 */
 .a-class {
   display: inline-block; /* <a> タグをインラインブロック要素にする */
@@ -236,67 +307,16 @@ body
   /*background-position: center; /* 画像を中央に配置 */
   /*text-align: center; /* テキストを横方向に中央揃え */
   /*line-height: 100px; /* 高さに合わせてテキストを縦方向に中央揃え */
-  color: rgb(160, 160, 160); /* テキストカラーの設定（必要に応じて変更） */
+  color: rgb(255, 255, 255); /* テキストカラーの設定（必要に応じて変更） */
   text-decoration: none; /* テキストの下線を削除 */
   /*font-family: 'Open Sans', sans-serif; /* フォントファミリ */
   font-size: 5rem;
 }
 
-/* aタグ個別 */
-#category-1-a-id
-{
-  /*background-image: url('../image/yellow.png'); /* 背景画像を設定 */
-  /* background-color: rgb(0, 0, 0); */
-}
-
-/* aタグ個別 */
-#category-2-a-id
-{
-  /*background-image: url('../image/blue.png'); /* 背景画像を設定 */
-  /* background-color: rgb(0, 0, 0); */
-}
-
-/* aタグ個別 */
-#category-3-a-id
-{
-  /*background-image: url('../image/green.png'); /* 背景画像を設定 */
-  /* background-color: rgb(0, 0, 0); */
-}
 
 
 
 
-/* --------------------------------------------------------------------- */
-/* p用div一括 */
-.category-d-p-class 
-{
-}
-
-/* p用div個別 */
-#category-d-p-1
-{
-
-}
-
-#category-d-p-2
-{
-
-}
-
-#category-d-p-3
-{
-
-}
-
-
-/* --------------------------------------------------------------------- */
-/* p一括 */
-.p-class 
-{
-  /*grid-row: 2; /* 下部の行に配置 */
-  /*text-align: center; /* テキストを中央揃え */
-  /*color: black; /* テキストカラーの設定 */
-}
 
 
 
