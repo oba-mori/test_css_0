@@ -1,5 +1,29 @@
 /*  */
 
+/* 
+この部分変更
+  .wrapper {
+     padding-bottom: 4.8rem; 
+  }
+
+
+  
+
+  footer {
+    display: none;
+  }
+
+  .wrapper {
+    padding-top: 6rem;
+  }
+  
+  main {
+    margin: 0 clamp(5rem, 7vw, 10rem);
+  }
+
+*/
+
+
 /*user agent stylesheet を無効化する*/
 /*user agent stylesheetとは、各ブラウザがページを読み込むときに既定で適用されている、CSSのことです。*/
 /*参考：https://mebee.info/2019/08/21/user-agent-stylesheet/#outline__2*/
@@ -91,133 +115,28 @@ html {
     z-index: 999; /* 最も前面に表示したいため */
   }
 
-
-/*--------------------------------------------------------------------*/
-  /* 常に表示されている要素(、ボタン) */
-  .header-div
-  {
-    display: flex;
-    align-items: center; /* 垂直方向の中央揃え */
-    justify-content: center; /* 水平方向の中央揃え */
-    position: relative; /* 絶対配置の基準となる */
-    height: 6rem;
-    background-color: rgb(245, 245, 245);
-  }
-
-  /* 画像 */
-  .header-div-image
-  {
-    background-color: rgb(245, 245, 245);
-    
-    width: 20rem;
-    height: 80%;
   
-    margin-top: auto;
-    margin-right: auto;
-    margin-bottom: auto; 
-    margin-left: 10rem;
-  }
 
-  /* 文字 */
-  .header-p
-  {
-    display: none;
-    margin: 0 auto; /* 中央揃え */
-    text-align: center; /* 文字列を中央揃え */
-  }
-
-  /* Button */
+  /* ヘッダー表示非表示ボタン */
   #toggle-header-button
   {
     position: absolute; /* 絶対配置 */
     right: 10px; /* 右端に10pxのマージンを設定 */
-  }
-
-
-
-/*--------------------------------------------------------------------*/
-  /* Buttonで表示非表示 */
-  /* ナビゲーションバー */
-  .navigation-header {
-    opacity: 0;
-    transform: translateY(-100%); /* 初期位置を画面の上に設定 */
-    visibility: hidden;
-    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
-    background-color: rgb(245, 245, 245);
-    padding: 20px;
-    border: none;
-    width: 100%;
-    display: none; /* 初期状態で非表示 */   
-  }
-
-  /* ナビゲーションバーが表示される状態 */
-  .navigation-header.show {
-    opacity: 1;
-    transform: translateY(0);
-    visibility: visible; /* 表示時は可視化 */
-  }
-
-
-  /* 箇条書き 要素 */
-  .navigation-header ul {
-    /* フレックスボックス化 */
-    /* 子要素を縦並びにする */
-    display: flex;
-    flex-direction: column; 
-    /* 効果(・等)を削除 */
-    list-style: none;
-
-    /* リンクボタンを右寄せ */
-    justify-content: right;
-   
-    margin: 0  clamp(10rem, calc(var(--vw) * 10), 25rem);
-    /* デフォルトの内部余白を削除 */
-    padding: 0;
-  }
-  /* 全てのli要素(リンクボタン) */
-  .navigation-header li {
-    /* フォントサイズ */
-    font-size: 3rem;
-    text-align: center;
-    padding: 0rem 1rem;
-  }
-  /* ナビゲーションバーの文字 */
-  .navigation-header a {
-    /* 文字色 */
-    color: rgb(0, 0, 0);
     
-    text-decoration: none;
-   
-    /* margin: 0rem 2rem; */
-    /* padding: 0rem 0.2rem; */ /* カーソルを合わせた時に出る下線の長さを長くするため */
 
-    /* カーソル合わせた時にゆっくりと下線を表示させるため */
-    position: relative;
-    display: inline-block;
-    /* 文字の下線削除 */
-    text-decoration: none;
-  }
-  /* ナビゲーションバーの文字にカーソルを合わせた時 */
-  /* .navigation-header a:hover{
-  
-  } */
-  /* カーソル合わせた時にゆっくりと下線を表示 */
-  .navigation-header a::after {
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    content: '';
-    width: 100%;
-    height: 2px;
-    background: rgb(0, 0, 0);
-    opacity: 0;
-    visibility: hidden;
-    transition: .3s;
-  }
-  .navigation-header a:hover::after {
-    bottom: -3px;
-    opacity: 1;
-    visibility: visible;
+
+    background-color: #c4c4c4; /* 背景色 */
+    border: none; /* 枠線をなしにする */
+    color: white; /* 文字色 */
+    padding: 10px 20px; /* 内部余白 */
+    text-align: center; /* 文字を中央に揃える */
+    text-decoration: none; /* 下線をなしにする */
+    display: inline-block; /* インライン要素のブロック化 */
+    font-size: 16px; /* フォントサイズ */
+    margin: 4px 2px; /* 外部余白 */
+    cursor: pointer; /* カーソルをポインターにする */
+    border-radius: 8px; /* 角を丸くする */
+    transition: background-color 0.3s, transform 0.2s; /* 背景色とトランスフォームの遷移 */
   }
 
 
@@ -425,12 +344,29 @@ main {
   }
 
   .wrapper {
-    padding-bottom: 4.8rem;
+    /* padding-bottom: 4.8rem; */
   }
+
+
+  
+    /* フッター非表示 */
+    footer {
+      display: none;
+    }
+  
+    .wrapper {
+      padding-top: 6rem;
+    }
+    
+    /* メイン */
+    main {
+      margin: 0 clamp(5rem, 7vw, 10rem);
+    }
   
 
 
 }/* 終 */
+
 
 
 
