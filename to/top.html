@@ -148,6 +148,39 @@
 
 
 
+      <!-- 歯車アニメーション -->
+      <div class="gear-container-all">
+        <div class="gear-container">
+            <img src="gear.png" alt="Gear" class="gear gear1">
+            <img src="gear.png" alt="Gear" class="gear gear2">
+            <img src="gear.png" alt="Gear" class="gear gear3">
+        </div>
+      </div>
+
+      <!-- 歯車アニメーションCSS -->
+      <link rel="stylesheet" href="styles.css">
+
+
+      <!-- 歯車はアニメーションを消す -->
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // 3秒後にギアコンテナをフェードアウトさせる
+          setTimeout(function() {
+                  document.querySelector('.gear-container').classList.add('fade-out');
+                  
+                  // ギアコンテナが完全にフェードアウトした後に全体をフェードアウト
+                  setTimeout(function() {
+                      document.querySelector('.gear-container-all').classList.add('fade-out');
+                  }, 500); // ギアコンテナが消えてから0.5秒後に全体をフェードアウト
+              }, 3000); // 3秒後にギアコンテナを非表示にする
+        });      
+      </script>
+
+
+
+
+
+
 
       <!-- メイン -->
       <main>

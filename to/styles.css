@@ -1,0 +1,95 @@
+/* 
+
+歯車が回るアニメーション
+
+*/
+
+
+
+
+.gear-container-all{
+  position: fixed; /* スクロールに関係なく画面上に固定 */
+  z-index: 9999; /* 最前面に表示 */
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+  background-color: rgb(255, 255, 255);
+  margin: 0;
+  opacity: 1;
+  transition: opacity 2s ease-out; /* フェードアウトアニメーション */
+}
+/* ギアコンテナ全体をフェードアウトさせるスタイル */
+.gear-container-all.fade-out {
+  opacity: 0;
+  pointer-events: none; /* フェードアウト後にクリックできないようにする */
+}
+
+.gear-container {
+  position: relative;
+  width: 60px;
+  height: 75px;
+  /*background-color: #fff; /* ボックスの背景色を設定 */
+  /*border: 1px solid #ccc; /* ボックスの境界線を設定 */
+  transition: opacity 0.5s ease-out; /* ギアコンテナのフェードアウトアニメーション */
+}
+/* ギアコンテナをフェードアウトさせるスタイル */
+.gear-container.fade-out {
+  opacity: 0;
+}
+
+
+.gear {
+  position: absolute;
+  transform-origin: center;
+  animation: rotate 10s linear infinite;
+}
+
+.gear1 {
+  width: 25px;
+  height: 25px;
+  top: 0;
+  right: 15%;
+  animation-duration: 1s; /* Smaller gear rotates faster */
+}
+
+.gear2 {
+  width: 50px;
+  height: 50px;
+  top: 15%;
+  left: 0;
+  transform: translateY(-50%);
+  animation-duration: 2s; /* Medium gear rotates at default speed */
+  animation-direction: reverse; /* 逆回転 */
+}
+
+.gear3 {
+  width: 30px;
+  height: 30px;
+  bottom: 5%;
+  right: 0%;
+  animation-duration: 1.1s; /* Larger gear rotates slower */
+}
+
+@keyframes rotate {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+/* display:none のスタイル */
+.hide {
+  display: none;
+}
+
+
+
