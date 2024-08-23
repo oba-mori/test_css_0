@@ -73,6 +73,7 @@ function dot()
     const options = [
       { value: '../3d/cube_small.glb', text: 'cube_small(小)' },
       { value: '../3d/dog_1.glb', text: 'dogtag' },
+      { value: '../3d/brd_r1.glb', text: 'dogtag' },      
       { value: '', text: 'オブジェクト無し' }
     ];
 
